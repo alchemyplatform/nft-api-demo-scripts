@@ -17,18 +17,20 @@ The string at the end of that url is the API key:
 
 5. Check the docs for endpoints you want to query: https://docs.alchemy.com/alchemy/enhanced-apis/nft-api
 
-## getNFTs examples
+### 1. Quickstart for getNFTs
 
-### Get all NFTs that is owned by thatguyintech.eth
+The `getNFTs.sh` script makes a simple query to fetch the first 100 NFTs for a given wallet address.
+
+1. Clone this repo
+2. Run the `getNFTs.sh` script like this:
 
 ```
-// Find thatguyintech.eth's address
-0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c
+nft-api-scripts % ./getNFT.sh
+> Enter your Alchemy API key: tr1hqKWEHZh_XMmWCZTRtvxpuR8HG6yx
+> Enter the Ethereum address you'd like to getNFTs for: 0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c
+> Continue? (Y/N): Y
+> fetching from: https://eth-mainnet.g.alchemy.com/tr1hqKWEHZh_XMmWCZTRtvxpuR8HG6y/v1/getNFTs/?owner=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c...
 
-// Compose the request url
-curl 'https://eth-mainnet.g.alchemy.com/your-api-key/v1/getNFTs/?owner=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c'
-
-// Get response
 {
   "ownedNfts": [
     {
@@ -65,10 +67,3 @@ curl 'https://eth-mainnet.g.alchemy.com/your-api-key/v1/getNFTs/?owner=0xF5FFF32
   "totalCount": 40
 }
 ```
-
-###
-
-
-
-## 
-tr1hqKWEHZh_XMmWCZTRtvxpuR8HG6yS
