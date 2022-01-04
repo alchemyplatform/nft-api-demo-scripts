@@ -22,7 +22,7 @@ The string at the end of that url is the API key:
 The `getNFTs.sh` script makes a simple query to fetch the first 100 NFTs for a given wallet address.
 
 1. Clone this repo
-2. Run the `getNFTs.sh` script like this:
+2. Run the `getNFTs.sh` script in terminal via `./getNFTs.sh`. If you run into permissions issues, you may need to `chmod 755 getNFTs.sh`.
 
 ```
 nft-api-scripts % ./getNFT.sh
