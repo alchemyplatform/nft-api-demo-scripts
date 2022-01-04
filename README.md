@@ -17,7 +17,7 @@ The string at the end of that url is the API key:
 
 5. Check the docs for endpoints you want to query: https://docs.alchemy.com/alchemy/enhanced-apis/nft-api
 
-### 1. Quickstart for getNFTs
+## 1. Example: getNFTs
 
 The `getNFTs.sh` script makes a simple query to fetch the first 100 NFTs for a given wallet address.
 
