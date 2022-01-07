@@ -15,14 +15,13 @@ For example, if your RPC url looks like this:
 The string at the end of that url is the API key:
 `tr1hqKWEHZh_XMmWCZTRtvxpuR8HG6yx`
 
-5. Check the docs for endpoints you want to query: https://docs.alchemy.com/alchemy/enhanced-apis/nft-api
+5. Clone this repo with `git clone git@github.com:alchemyplatform/nft-api-scripts.git`
 
-## 1. Example: getNFTs
+## getNFTs
 
 The `getNFTs.sh` script makes a simple query to fetch the first 100 NFTs for a given wallet address.
 
-1. Clone this repo
-2. Run the `getNFTs.sh` script in terminal via `./getNFTs.sh`. If you run into permissions issues, you may need to `chmod 755 getNFTs.sh`.
+If you run into permissions issues, you may need to `chmod 755 getNFTs.sh`.
 
 ```
 nft-api-scripts % ./getNFT.sh
@@ -66,4 +65,21 @@ nft-api-scripts % ./getNFT.sh
   ],
   "totalCount": 40
 }
+```
+
+## getNFTMetadata.sh
+
+The `getNFTMetadata.sh` script returns the metadata associated with a particular NFT. Metadata may include things like token type (721 vs 1155), image uri, attributes/traits, etc.
+
+If you run into permissions issues, you may need to `chmod 755 getNFTs.sh`.
+
+```
+nft-api-scripts % ./getNFTMetadata.sh
+=== getNFTMetadata ===
+Enter your Alchemy API key: tr1hqKWEHZh_XMmWCZTRtvxpuR8HG6yx
+Enter the Ethereum contractAddress you'd like to getNFTMetadata for: 0x25ed58c027921e14d86380ea2646e3a1b5c55a8b
+Enter the tokenId you'd like to getNFTMetadata for: 0x0000000000000000000000000000000000000000000000000000000000000619
+Continue? (Y/N): Y
+querying from: https://eth-mainnet.g.alchemy.com/tr1hqKWEHZh_XMmWCZTRtvxpuR8HG6yS/v1/getNFTMetadata?contractAddress=0x25ed58c027921e14d86380ea2646e3a1b5c55a8b&tokenId=0x0000000000000000000000000000000000000000000000000000000000000619...
+{"contract":{"address":"0x25ed58c027921e14d86380ea2646e3a1b5c55a8b"},"id":{"tokenId":"0x0000000000000000000000000000000000000000000000000000000000000619","tokenMetadata":{"tokenType":"ERC721"}},"title":"","description":"","externalDomainViewUrl":"data:application/json;base64,eyJuYW1lIjogIkRldiAjMTU2MSIsICJkZXNjcmlwdGlvbiI6ICJEZXZlbG9wZXJzIGFyb3VuZCB0aGUgd29ybGQgYXJlIHRpcmVkIG9mIHdvcmtpbmcgYW5kIGNvbnRyaWJ1dGluZyB0aGVpciB0aW1lIGFuZCBlZmZvcnQgdG8gZW5yaWNoIHRoZSB0b3AgMSUuIEpvaW4gdGhlIG1vdmVtZW50IHRoYXQgaXMgY29tbXVuaXR5IG93bmVkLCBidWlsZGluZyB0aGUgZnV0dXJlIGZyb20gdGhlIGJvdHRvbSB1cC4iLCAiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhCeVpYTmxjblpsUVhOd1pXTjBVbUYwYVc4OUluaE5hVzVaVFdsdUlHMWxaWFFpSUhacFpYZENiM2c5SWpBZ01DQXpOVEFnTXpVd0lqNDhjM1I1YkdVK0xtSmhjMlVnZXlCbWFXeHNPaUJpYkdGamF6c2dabTl1ZEMxbVlXMXBiSGs2SUhObGNtbG1PeUJtYjI1MExYTnBlbVU2SURFMGNIZzdJSDA4TDNOMGVXeGxQanh5WldOMElIZHBaSFJvUFNJeE1EQWxJaUJvWldsbmFIUTlJakV3TUNVaUlHWnBiR3c5SW5kb2FYUmxJaUF2UGp4MFpYaDBJSGc5SWpFd0lpQjVQU0l5TUNJZ1kyeGhjM005SW1KaGMyVWlQa2ROTFU1QlFTQkpMMDg4TDNSbGVIUStQSFJsZUhRZ2VEMGlNVEFpSUhrOUlqUXdJaUJqYkdGemN6MGlZbUZ6WlNJK1FuSmhZMnRsZEhNOEwzUmxlSFErUEhSbGVIUWdlRDBpTVRBaUlIazlJall3SWlCamJHRnpjejBpWW1GelpTSStVR2x1YXlCSWIyOWthV1U4TDNSbGVIUStQSFJsZUhRZ2VEMGlNVEFpSUhrOUlqZ3dJaUJqYkdGemN6MGlZbUZ6WlNJK1UzZHBablE4TDNSbGVIUStQSFJsZUhRZ2VEMGlNVEFpSUhrOUlqRXdNQ0lnWTJ4aGMzTTlJbUpoYzJVaVBsZG9hWFJsSUVoaGREd3ZkR1Y0ZEQ0OGRHVjRkQ0I0UFNJeE1DSWdlVDBpTVRJd0lpQmpiR0Z6Y3owaVltRnpaU0krVTJobGJucG9aVzQ4TDNSbGVIUStQSFJsZUhRZ2VEMGlNVEFpSUhrOUlqRTBNQ0lnWTJ4aGMzTTlJbUpoYzJVaVBrRmljM1J5WVdOMFBDOTBaWGgwUGp4MFpYaDBJSGc5SWpFd0lpQjVQU0l4TmpBaUlHTnNZWE56UFNKaVlYTmxJajVEYjNOdGFXTThMM1JsZUhRK1BDOXpkbWMrIn0=","media":{"uri":""},"alternateMedia":[{"uri":""}],"metadata":{"metadata":[],"attributes":[]}}
 ```
