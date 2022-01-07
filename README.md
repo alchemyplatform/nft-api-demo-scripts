@@ -1,5 +1,7 @@
 # Alchemy Ethereum NFT API Example Scripts
 
+https://www.loom.com/share/eb827d3cc5204b18baf86f511f2147cd
+
 ## Setup 
 
 1. Create an account at https://alchemy.com/
