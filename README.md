@@ -1,6 +1,14 @@
-# Alchemy Ethereum NFT API Example Scripts
+# Alchemy Ethereum NFT API Demo Scripts
+
+If you like to hear someone walking you through this repo,
+check out this video:
 
 https://www.loom.com/share/eb827d3cc5204b18baf86f511f2147cd
+
+If you want more in-depth documentation on the Alchemy NFT API,
+visit this page: 
+
+https://docs.alchemy.com/alchemy/enhanced-apis/nft-api
 
 ## Setup 
 
@@ -17,7 +25,9 @@ For example, if your RPC url looks like this:
 The string at the end of that url is the API key:
 `tr1hqKWEHZh_XMmWCZTRtvxpuR8HG6yx`
 
-5. Clone this repo with `git clone git@github.com:alchemyplatform/nft-api-scripts.git`
+5. Clone this repo with `git clone git@github.com:alchemyplatform/nft-api-demo-scripts.git`
+
+6. Run scripts with either `./getNFTs.sh` or `./getNFTMetadata.sh`.
 
 ## getNFTs
 
